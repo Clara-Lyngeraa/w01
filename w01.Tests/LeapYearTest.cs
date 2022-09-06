@@ -30,7 +30,7 @@ public class LeapYearTest
     {
         var sut = new Program();
 
-        var result = sut.LeapYearOrNot(4);
+        var result = sut.LeapYearOrNot(1664);
 
         result.Should().Be("yay");
     }
@@ -40,7 +40,7 @@ public class LeapYearTest
     {
         var sut = new Program();
 
-        var result = sut.LeapYearOrNot(100);
+        var result = sut.LeapYearOrNot(1700);
 
         result.Should().Be("nay");
     }
@@ -54,5 +54,16 @@ public class LeapYearTest
 
         result.Should().Be("Neeeeeeeeeej for tideligt");        
     }
+
+    [Fact]
+    public void throws_exception()
+    {
+        var sut = new Program();
+
+        var result = sut.getInput("hej");
+
+        result.Should().Be(0);        
+    }
+
 
 }

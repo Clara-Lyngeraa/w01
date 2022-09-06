@@ -6,12 +6,24 @@ public class Program{
     
         var program = new Program();
 
-        var input = Convert.ToInt32(Console.ReadLine());
 
-        Console.WriteLine(program.LeapYearOrNot(input));
+        Console.WriteLine(program.LeapYearOrNot(program.getInput(Console.ReadLine())));
         
 
         
+    }
+
+    public int getInput(string input)
+    {
+        int i = 0;
+        if(int.TryParse(input, out i))
+        {
+            var n = Convert.ToInt32(input);
+            return n;
+        } else 
+        {
+            return i;
+        }
     }
     public bool isLeapYear(int year)
     {
