@@ -20,8 +20,39 @@ public class LeapYearTest
     {
         var sut = new Program();
 
-        var result = sut.isLeapYear(4);
+        var result = sut.isLeapYear(1700);
 
-        result.Should().BeTrue();
+        result.Should().BeFalse();
     }
+
+    [Fact]
+    public void yay()
+    {
+        var sut = new Program();
+
+        var result = sut.LeapYearOrNot(4);
+
+        result.Should().Be("yay");
+    }
+
+    [Fact]
+    public void nay()
+    {
+        var sut = new Program();
+
+        var result = sut.LeapYearOrNot(100);
+
+        result.Should().Be("nay");
+    }
+    
+    [Fact]
+    public void before_1582()
+    {
+        var sut = new Program();
+
+        var result = sut.LeapYearOrNot(1580);
+
+        result.Should().Be("Neeeeeeeeeej for tideligt");        
+    }
+
 }
