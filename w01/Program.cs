@@ -6,7 +6,6 @@ public class Program{
     
         var program = new Program();
 
-
         Console.WriteLine(program.LeapYearOrNot(program.getInput(Console.ReadLine())));
         
 
@@ -44,7 +43,6 @@ public class Program{
     {
         if(year < 1582){
             return "Neeeeeeeeeej for tideligt";
-    
         }
         if(year % 4 == 0){
              if(year % 100 == 0)
